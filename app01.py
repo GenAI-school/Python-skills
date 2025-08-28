@@ -1,5 +1,6 @@
 class employee:
     def __init__(self):
+        self.__company = "TCS"
         self.empname = "Sreehari"
         self.empID = 102533
         self.empSal =  25000

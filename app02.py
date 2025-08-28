@@ -1,9 +1,12 @@
 class chatbook:
+    __bankbalance = 0
     def __init__(self):
+        self.__name = "communication platform"
+        chatbook.__bankbalance+=10000
         self.userName = ''
         self.password = ''
         self.loggedIn = False
-        self.menu()
+        #self.menu()
 
     def menu(self):
         User_input = input(""""1.Press 1 to signup 2.Press 2 to Signin 3.Press 3 to write a post 4.Press 4 to message a friend 5.Press any other key to exit""")
@@ -17,6 +20,14 @@ class chatbook:
             self.messagefriend()
         else:
             print("Thank you for using chatbook")
+    @staticmethod
+    def get_bal():
+        return chatbook.__bankbalance
+    
+    @staticmethod
+    def set_bal(amount):
+        chatbook.__bankbalance = amount
+
 
 
     def signup(self):
