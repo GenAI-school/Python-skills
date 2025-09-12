@@ -1,0 +1,6 @@
+Purpose / Context
+Putting it together, this line is probably being used to choose which data points will be considered anomalies (i.e. “anomalous”) in a dataset of size num_samples:
+You have num_samples total points.
+You decide that 5% of them should be anomalies.
+So you randomly select that many distinct indices.
+Then elsewhere in the code these indices might be used to mark or treat those data points differently (e.g. add noise, label them anomalous, etc.).
